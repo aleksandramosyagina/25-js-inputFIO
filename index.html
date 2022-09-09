@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+<h1>Форма для ввода имени</h1>
+<label for="name_input">Введите ФИО</label>
+<input type="text" id="nameInput">
+<button onclick="btnNameInput()">Подтвердить</button>
+<label for="surname">Фамилия</label>
+<input type="text" id="surname">
+<label for="name">Имя:</label>
+<input type="text" id="name">
+<label for="middle_name">Отчество</label>
+<input type="text"  id="middle_name">
+
+<script>
+
+function btnNameInput() {
+    const nameInput = document.getElementById('nameInput');
+    console.log(nameInput.value);
+    const nameInputArr=nameInput.value.split(' ');
+    const surname = document.getElementById('surname');
+    surname.value = nameInputArr[0];
+    const name = document.getElementById('name');
+    name.value = nameInputArr[1];
+    const middle_name = document.getElementById('middle_name');
+    middle_name.value = nameInputArr[2];
+}
+
+</script>
+</body>
+
+</html>
